@@ -10,6 +10,10 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   config.warden do |manager|
+    manager.default_strategies(:scope => :another_user).unshift :two_factor_authenticatable
+  end
+
+  config.warden do |manager|
     manager.default_strategies(:scope => :user).unshift :two_factor_authenticatable
   end
 
