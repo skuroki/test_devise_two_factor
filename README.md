@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I am writing test code for the devise-two-factor gem.
+I am documenting the incorrect implementation (User) where backup codes do not work in a MySQL environment, and the correct implementation (AnotherUser) where they do.
 
-Things you may want to cover:
+## How to Run
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker-compose up
+docker-compose exec web rails test
+```
