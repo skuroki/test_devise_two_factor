@@ -16,5 +16,7 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    environment:
+      OTP_SECRET_ENCRYPTION_KEY: 01234567890abcdef01234567890abcdef
 volumes:
   test_devise_two_factor_db:
